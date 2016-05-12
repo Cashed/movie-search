@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='MovieApp'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Movie Search App</title>
+
+    <!-- stylesheets -->
+    <link href='css/bootstrap.min.css' rel='stylesheet'/>
+    <link href='css/bootstrap-theme.min.css' rel='stylesheet'/>
+    <link href='css/normalize.css' rel='stylesheet'/>
+    <link href='css/styles.css' rel='stylesheet'/>
+
+    <!-- angular -->
+    <script src='lib/angular.js'></script>
+    <script src='lib/angular-route.js'></script>
+    <script src='lib/angular-animate.js'></script>
+    <script src='app.js'></script>
+    <script src='movie-search.js'></script>
+    <script src='route-config.js'></script>
+
+    <!-- superstatic -->
+    <base href="/">
+  </head>
+  <body>
+    <h1>Angular OMDb API Search</h1>
+
+    <div ng-view></div>
+
+  </body>
+</html>
