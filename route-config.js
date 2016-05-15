@@ -9,12 +9,20 @@
 
   function movieRouter($routeProvider, $locationProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'movie-search.html',
-        controller: 'MovieSearch',
-        controllerAs: 'query'
+      .when('/movies/:search', {
+        templateUrl: 'movies/movies.html',
+        controller: 'Movies',
+        controllerAs: 'movie',
+        resolve: {
+          movies: getMovieList
+        }
       });
-
     $locationProvider.html5Mode(true);
+  }
+
+  function getMovieList(movieService, $route) {
+    return movieService.getMovies($route.current.params.search).then(function(data) {
+      return data;
+    });
   }
 })();
