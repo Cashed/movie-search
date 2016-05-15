@@ -1,6 +1,7 @@
-<div ng-repeat='film in movie.movieList'>
-  <div class='movie'>
+
+<div ng-repeat='film in movie.movieList' class='movie'>
+  <a href='/movies/id/{{ film.imdbID }}'>
     <h2>{{ film.Title }}</h2>
-    <p>{{ film.Year }}</p>
-  </div>
+  </a>
+  <p>{{ film.Year }}</p>
 </div>

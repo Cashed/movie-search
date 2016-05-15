@@ -17,6 +17,7 @@
     <script src='search.js'></script>
     <script src='movies/movie-service.js'></script>
     <script src='movies/movies.js'></script>
+    <script src='movies/one-movie.js'></script>
 
     <!-- superstatic -->
     <base href="/">
@@ -24,7 +25,7 @@
   <body>
     <h1>Angular OMDb API Search</h1>
 
-    <div ng-controller='Search as query'>
+    <div ng-controller='Search as query' class='search'>
       <input type='text' ng-model='query.text' placeholder='enter search'/>
       <a href='/movies/{{ query.text }}'>Search</a>
     </div>

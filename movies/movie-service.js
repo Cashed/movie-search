@@ -17,8 +17,20 @@
             console.log(error);
           });
       }
-      return {
-        getMovies: getMovies
+
+      var getOneMovie =  function(movieID) {
+        return $http.get(`http://www.omdbapi.com/?i=${movieID}`)
+          .then(function(movie) {
+            return movie.data;
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
       }
+
+      return {
+        getMovies: getMovies,
+        getOneMovie: getOneMovie
+      };
     }
 })();
